@@ -10,6 +10,6 @@ PATH=$HOME/bin:~/Applications/MacVim.app/Contents/MacOS:/Applications/MacVim.app
 
 hash mvim 2>/dev/null && VISUAL=mvim || VISUAL=Vim
 
-open -g -a /Applications/Marked "$MM_EDIT_FILEPATH" 2>/dev/null
-$VISUAL -gf +$MM_LINE_NUMBER -c "set filetype=markdown" "$MM_EDIT_FILEPATH"
+#open -g -a /Applications/Marked "$MM_EDIT_FILEPATH" 2>/dev/null
+$VISUAL -gf +$MM_LINE_NUMBER -c "set filetype=pandoc" "$MM_EDIT_FILEPATH"
 osascript -e 'tell app "MailMate" to activate'
